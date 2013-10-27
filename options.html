@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Tieba Service Caller Options</title>
+<style type="text/css">
+body{
+	text-align: center;
+	font-family: Segoe UI, Helvetica, Arial, Verdana, Courier
+}
+#main{
+	text-align: left;
+}
+.area{
+	background-color: #eeeeee;
+	margin-top: 4px;
+	padding: 8px;
+}
+#main input{
+	line-height: 26px;
+	width: 200px;
+	height: 30px;
+}
+a:visited, a:link{
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+<div id="main">
+<div>Domain</div>
+<div class="area">
+	<input type="text" id="domain" />
+	<button id="set_domain">Set</button>
+</div>
+<div>Services</div>
+<div class="area">
+	<table id="get">
+	</table>
+</div>
+<div>Add New Service</div>
+<div class="area">
+	<table>
+		<tr>
+			<td>Service Name</td>
+			<td><input type="text" id="service" /></td>
+		</tr>
+		<tr>
+			<td>Method Name</td>
+			<td><input type="text" id="method" /></td>
+		</tr>
+		<tr>
+			<td>Parameter</td>
+			<td><input type="text" id="param" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button id="add_service">Add</button><button id="add_sep">Add Separator</button></td>
+		</tr>
+	</table>
+</div>
+<div>Restore to Default</div>
+<div class="area"><button id="set_default">Restore</button></div>
+<div>About</div>
+<div class="area">Copyright &copy; <a href="mailto:zhangwanlong@baidu.com">zhangwanlong@baidu.com</a></div>
+</div>
+</body>
+<script src="options.js"></script>
+</html>
