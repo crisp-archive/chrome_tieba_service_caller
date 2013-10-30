@@ -12,7 +12,7 @@ defaultConfig = {
 		"service" :[
 			{ "service": "forum", "method": "getForumInfoByName", "param": "forum_name" },
 			{ "service": "forum", "method": "getFidByFname", "param": "query_words[]" },
-			{ "service": "forum", "method": "getFnameByFid", "param": "forum_id" },
+			{ "service": "forum", "method": "getFnameByFid", "param": "forum_id[]" },
 			{ "type": "separator" },
 			{ "service": "user", "method": "getUidByUnames", "param": "user_name[]" },
 			{ "service": "user", "method": "getUnameByUids", "param": "user_id" },
