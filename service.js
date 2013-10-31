@@ -52,7 +52,8 @@ function parseQuery(info)
 	}
 	else if(menuId=="timestamp"){
 		var realTime = new Date(input*1000);
-		alert(realTime);
+		var strTime = realTime.getFullYear()+"-"+realTime.getMonth()+"-"+realTime.getDate()+" "+realTime.getHours()+":"+realTime.getMinutes()+":"+realTime.getSeconds();
+		alert(strTime);
 		return;
 	}
 	else{

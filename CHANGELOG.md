@@ -14,3 +14,6 @@ CHANGELOG
 
 0.1.1030
 * 修复getFnameByFid配置bug
+
+0.1.1031
+* 调整时间展示格式
