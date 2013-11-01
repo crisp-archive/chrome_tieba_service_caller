@@ -88,9 +88,16 @@ function generateContextMenu()
 	});
 	// timestamp to time
 	chrome.contextMenus.create({
-		"title": "convert timestamp",
+		"title": "timestamp2time",
 		"parentId": "parent",
 		"id": "timestamp",
+		"contexts": contexts
+	});
+	// long to ip
+	chrome.contextMenus.create({
+		"title": "long2ip",
+		"parentId": "parent",
+		"id": "long2ip",
 		"contexts": contexts
 	});
 	chrome.contextMenus.create({

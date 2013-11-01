@@ -56,6 +56,10 @@ function parseQuery(info)
 		alert(strTime);
 		return;
 	}
+	else if(menuId=="long2ip"){
+		alert(long2ip(parseInt(input)));
+		return;
+	}
 	else{
 		for(var i in service){
 			if(typeof service[i]["type"] == "undefined"){
@@ -91,6 +95,13 @@ function callService()
 {
 }
 
+function long2ip(i){
+	return (Math.floor(i/(256*256*256))) + "." +  
+	(Math.floor(i%(256*256*256)/(256*256))) + "." + 
+	(Math.floor(i%(256*256)/256)) + "." + 
+	(Math.floor(i%256));
+}
+
 function generateContextMenu()
 {
 	var contexts = ["selection"];
@@ -110,9 +121,16 @@ function generateContextMenu()
 	});
 	// timestamp to time
 	chrome.contextMenus.create({
-		"title": "convert timestamp",
+		"title": "timestamp2time",
 		"parentId": "parent",
 		"id": "timestamp",
+		"contexts": contexts
+	});
+	// long to ip
+	chrome.contextMenus.create({
+		"title": "long2ip",
+		"parentId": "parent",
+		"id": "long2ip",
 		"contexts": contexts
 	});
 	chrome.contextMenus.create({
