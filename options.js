@@ -100,6 +100,13 @@ function generateContextMenu()
 		"id": "long2ip",
 		"contexts": contexts
 	});
+	// ip to long
+	chrome.contextMenus.create({
+		"title": "ip2long",
+		"parentId": "parent",
+		"id": "ip2long",
+		"contexts": contexts
+	});
 	chrome.contextMenus.create({
 		"type": "separator",
 		"parentId": "parent",

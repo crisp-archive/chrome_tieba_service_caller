@@ -60,6 +60,10 @@ function parseQuery(info)
 		alert(long2ip(parseInt(input)));
 		return;
 	}
+	else if(menuId=="ip2long"){
+		alert(ip2long(input));
+		return;
+	}
 	else{
 		for(var i in service){
 			if(typeof service[i]["type"] == "undefined"){
@@ -96,11 +100,20 @@ function callService()
 }
 
 function long2ip(i){
-	return (Math.floor(i/(256*256*256))) + "." +  
-	(Math.floor(i%(256*256*256)/(256*256))) + "." + 
-	(Math.floor(i%(256*256)/256)) + "." + 
+	return (Math.floor(i/(256*256*256))) + "." +
+	(Math.floor(i%(256*256*256)/(256*256))) + "." +
+	(Math.floor(i%(256*256)/256)) + "." +
 	(Math.floor(i%256));
 }
+
+function ip2long(ip)
+{
+	var numbers = ip.split(".");
+	return parseInt(numbers[0])*256*256*256 +
+	parseInt(numbers[1])*256*256 +
+	parseInt(numbers[2])*256 +
+	parseInt(numbers[3]);
+}    
 
 function generateContextMenu()
 {
@@ -131,6 +144,13 @@ function generateContextMenu()
 		"title": "long2ip",
 		"parentId": "parent",
 		"id": "long2ip",
+		"contexts": contexts
+	});
+	// ip to long
+	chrome.contextMenus.create({
+		"title": "ip2long",
+		"parentId": "parent",
+		"id": "ip2long",
 		"contexts": contexts
 	});
 	chrome.contextMenus.create({
