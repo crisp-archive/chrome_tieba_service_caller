@@ -20,3 +20,6 @@ CHANGELOG
 
 0.1.1101
 * 增加long2ip和ip2long转换
+
+0.1.1105
+* 修复转换timestamp的bug

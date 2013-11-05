@@ -52,7 +52,7 @@ function parseQuery(info)
 	}
 	else if(menuId=="timestamp"){
 		var realTime = new Date(input*1000);
-		var strTime = realTime.getFullYear()+"-"+realTime.getMonth()+"-"+realTime.getDate()+" "+realTime.getHours()+":"+realTime.getMinutes()+":"+realTime.getSeconds();
+		var strTime = realTime.getFullYear()+"-"+(realTime.getMonth()+1)+"-"+realTime.getDate()+" "+realTime.getHours()+":"+realTime.getMinutes()+":"+realTime.getSeconds();
 		alert(strTime);
 		return;
 	}
