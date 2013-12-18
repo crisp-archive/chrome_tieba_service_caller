@@ -23,3 +23,7 @@ CHANGELOG
 
 0.1.1105
 * 修复转换timestamp的bug
+
+0.1.1218
+* 更改默认service
+* 更改默认编码格式
