@@ -6,7 +6,7 @@
  * @brief options page
  *
  **/
- 
+
 defaultConfig = {
 	"config": {
 		"service" :[
