@@ -1,6 +1,6 @@
 {
 	"name": "Service Caller",
-	"version": "0.1.1105",
+	"version": "0.1.1218",
 	"description": "call service for any text selected on web page",
 	"options_page": "options.html",
 	"icons": {
