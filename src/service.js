@@ -10,16 +10,17 @@
 defaultConfig = {
 	"config": {
 		"service" :[
-			{ "service": "forum", "method": "getForumInfoByName", "param": "forum_name" },
+			{ "service": "forum", "method": "getBtxInfoByName", "param": "forum_name" },
 			{ "service": "forum", "method": "getFidByFname", "param": "query_words[]" },
 			{ "service": "forum", "method": "getFnameByFid", "param": "forum_id[]" },
 			{ "type": "separator" },
-			{ "service": "user", "method": "getUidByUnames", "param": "user_name[]" },
-			{ "service": "user", "method": "getUnameByUids", "param": "user_id" },
 			{ "service": "user", "method": "getUserData", "param": "user_id" },
+			{ "service": "user", "method": "getUserDataExByUname", "param": "user_name" },
+			{ "service": "user", "method": "getMyFavorForum", "param": "user_id" },
 			{ "type": "separator" },
+			{ "service": "perm", "method": "getForumMemberInfo", "param": "forum_id" },
 			{ "service": "perm", "method": "getBawuList", "param": "forum_id" },
-			{ "service": "perm", "method": "getUserManagerList", "param": "user_id" }
+			{ "service": "perm", "method": "tmpGetUserBawuList", "param": "user_id" }
 		],
 		"domain": "http://service.tieba.baidu.com"
 	}
@@ -78,12 +79,8 @@ function parseQuery(info)
 				continue;
 			}
 		}
-		var ie = "";
 		param += "="+input;
-		if( /.*[\u4e00-\u9fa5]+.*$/.test(param) ){
-			ie = "&ie=utf-8";
-		}
-		var url = domain+"/service/"+service_name+"?method="+method+"&"+param+ie+"&format=json";
+		var url = domain+"/service/"+service_name+"?method="+method+"&"+param+"&format=json&ie=utf-8";
 		chrome.tabs.create({
 			"url": url
 		});

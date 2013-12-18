@@ -10,16 +10,17 @@
 defaultConfig = {
 	"config": {
 		"service" :[
-			{ "service": "forum", "method": "getForumInfoByName", "param": "forum_name" },
+			{ "service": "forum", "method": "getBtxInfoByName", "param": "forum_name" },
 			{ "service": "forum", "method": "getFidByFname", "param": "query_words[]" },
 			{ "service": "forum", "method": "getFnameByFid", "param": "forum_id[]" },
 			{ "type": "separator" },
-			{ "service": "user", "method": "getUidByUnames", "param": "user_name[]" },
-			{ "service": "user", "method": "getUnameByUids", "param": "user_id" },
 			{ "service": "user", "method": "getUserData", "param": "user_id" },
+			{ "service": "user", "method": "getUserDataExByUname", "param": "user_name" },
+			{ "service": "user", "method": "getMyFavorForum", "param": "user_id" },
 			{ "type": "separator" },
+			{ "service": "perm", "method": "getForumMemberInfo", "param": "forum_id" },
 			{ "service": "perm", "method": "getBawuList", "param": "forum_id" },
-			{ "service": "perm", "method": "getUserManagerList", "param": "user_id" }
+			{ "service": "perm", "method": "tmpGetUserBawuList", "param": "user_id" }
 		],
 		"domain": "http://service.tieba.baidu.com"
 	}
