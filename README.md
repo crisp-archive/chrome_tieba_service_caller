@@ -1,22 +1,22 @@
 Tieba Service Caller
 ============
 
-#### 功能介绍
+#### Introduction
 
-* 以网页上选中的文字作为参数调用service
+* Call Tieba service on selected text on web page by context menu
 
-* 提供跳转到贴吧、时间戳转换和ip转换小功能
+* Utility functions like jump to Tieba, timestamp conversion and ip conversion
 
-* service/hostname可配置
+* Service and Hostname are configurable
 
-#### 安装方式
+#### Installation
 
-* 下载crx包
+* Download CRX pack
 
-* 打开chrome菜单 -> 工具 -> 扩展程序
+* Wrench menu -> Tool -> Extension
 
-* 把crx文件拖入到扩展程序中
+* Drag CRX file into the panel
 
-#### 未来计划
+#### Future Plan
 
-* 配置页面支持拖拽
+* Draggable configuration page
