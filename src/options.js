@@ -21,7 +21,8 @@ defaultConfig = {
 			{ "service": "perm", "method": "getBawuList", "param": "forum_id" },
 			{ "service": "perm", "method": "getUserBawuForum", "param": "user_id" }
 		],
-		"domain": "http://service.tieba.baidu.com"
+		"domain": "http://service.tieba.baidu.com",
+		"format": "json"
 	}
 };
 
@@ -29,7 +30,8 @@ function getConfig()
 {
 	chrome.storage.local.get("config", function(data){
 		service = data.config["service"];
-		domain = data.config["domain"];
+		domain  = data.config["domain"];
+		format  = data.config["format"];
 		showConfig();
 	});
 }
@@ -37,6 +39,7 @@ function getConfig()
 function showConfig()
 {
 	document.querySelector("#domain").value = domain;
+	document.querySelector("#format").value = format;
 	var config_html = "<tr><td>Service</td><td>Method</td><td>Parameter</td><td>Operation</td></tr>";
 	for(var i in service){
 		var service_name = service[i]["service"];
@@ -140,7 +143,7 @@ function generateContextMenu()
 
 function setService()
 {
-	var config = {"config":{"domain":domain,"service":service}}
+	var config = {"config":{"domain":domain,"service":service,"format":format}}
 	chrome.storage.local.set(config, function(){
 		getConfig();
 	});
@@ -149,8 +152,9 @@ function setService()
 function setDomain()
 {
 	new_domain = document.querySelector("#domain").value;
+	new_format = document.querySelector("#format").value;
 	
-	var config = {"config":{"domain":new_domain,"service":service}};
+	var config = {"config":{"domain":new_domain,"service":service,"format":new_format}};
 	chrome.storage.local.set(config, function(){
 		getConfig();
 	});
@@ -228,3 +232,4 @@ document.querySelector("#set_domain").addEventListener("click", setDomain);
 document.querySelector("#set_default").addEventListener("click", setDefault);
 document.querySelector("#add_sep").addEventListener("click", addSeparator);
 document.querySelector("#add_service").addEventListener("click", addService);
+

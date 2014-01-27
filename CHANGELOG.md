@@ -28,8 +28,12 @@ CHANGELOG
 * Update default service list to the latest
 * Change default encoding
 
-0.2.1, 2014-01-27
+0.2.1
 * Change perm:tmpGetBawuList to perm:getUserBawuForum in default list
 * Remove forum:getFnameByFid and forum:getFidByFname
 * Add forum:getBtxInfo
 * Add GitHub link in options page
+
+0.2.2
+* Data format configuration is available
+

@@ -21,7 +21,8 @@ defaultConfig = {
 			{ "service": "perm", "method": "getBawuList", "param": "forum_id" },
 			{ "service": "perm", "method": "getUserBawuForum", "param": "user_id" }
 		],
-		"domain": "http://service.tieba.baidu.com"
+		"domain": "http://service.tieba.baidu.com",
+		"format": "json"
 	}
 };
 
@@ -30,6 +31,7 @@ function getConfig(info, callback)
 	chrome.storage.local.get("config", function(data){
 		service = data.config["service"];
 		domain = data.config["domain"];
+		format = data.config["format"];
 		callback(info);
 	});
 }
@@ -79,7 +81,7 @@ function parseQuery(info)
 			}
 		}
 		param += "="+input;
-		var url = domain+"/service/"+service_name+"?method="+method+"&"+param+"&format=json&ie=utf-8";
+		var url = domain+"/service/"+service_name+"?method="+method+"&"+param+"&format="+format+"&ie=utf-8";
 		chrome.tabs.create({
 			"url": url
 		});
@@ -190,3 +192,4 @@ chrome.browserAction.onClicked.addListener(function(){
 		url: "options.html"
 	});
 });
+
