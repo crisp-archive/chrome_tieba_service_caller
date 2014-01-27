@@ -20,7 +20,7 @@ defaultConfig = {
 			{ "type": "separator" },
 			{ "service": "perm", "method": "getForumMemberInfo", "param": "forum_id" },
 			{ "service": "perm", "method": "getBawuList", "param": "forum_id" },
-			{ "service": "perm", "method": "tmpGetUserBawuList", "param": "user_id" }
+			{ "service": "perm", "method": "getUserBawuForum", "param": "user_id" }
 		],
 		"domain": "http://service.tieba.baidu.com"
 	}
