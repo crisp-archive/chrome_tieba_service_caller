@@ -11,8 +11,7 @@ defaultConfig = {
 	"config": {
 		"service" :[
 			{ "service": "forum", "method": "getBtxInfoByName", "param": "forum_name" },
-			{ "service": "forum", "method": "getFidByFname", "param": "query_words[]" },
-			{ "service": "forum", "method": "getFnameByFid", "param": "forum_id[]" },
+			{ "service": "forum", "method": "getBtxInfo", "param": "forum_id" },
 			{ "type": "separator" },
 			{ "service": "user", "method": "getUserData", "param": "user_id" },
 			{ "service": "user", "method": "getUserDataExByUname", "param": "user_name" },
