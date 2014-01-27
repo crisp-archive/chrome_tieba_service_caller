@@ -1,29 +1,33 @@
 CHANGELOG
 ==========
 0.1.1024 
-* 初始版本，只支持对写死的几个service进行调用  
+* Initial version, which only allows limited call of service
 
 0.1.1025
-* 支持跳转吧和时间戳转换
-* 支持可配置service
-* 加入右上角按键  
+* Add goto and timestamp conversion functions
+* Service is now configarable
+* Add options page icon
 
 0.1.1026
-* 点击右上角按键后在新标签页打开配置页面
-* 更换新的图标
+* Open options page in a new tab when clicking icon
+* New icon
 
 0.1.1030
-* 修复getFnameByFid配置bug
+* Fix forum:getFnameByFid bug
 
 0.1.1031
-* 调整时间展示格式
+* Change time format
 
 0.1.1101
-* 增加long2ip和ip2long转换
+* Add long2ip and ip2long functions
 
 0.1.1105
-* 修复转换timestamp的bug
+* Fix bug in timestamp conversion
 
 0.1.1218
-* 更改默认service
-* 更改默认编码格式
+* Update default service list to the latest
+* Change default encoding
+
+0.2.0127
+* Change perm:tmpGetBawuList to perm:getUserBawuForum in default list
+* Add GitHub link in options page
