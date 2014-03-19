@@ -20,3 +20,8 @@ Tieba Service Caller
 #### Future Plan
 
 * Draggable configuration page
+
+#### Copyright
+
+* This program is distributed under GNU General Public License v2.
+
