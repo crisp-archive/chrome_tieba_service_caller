@@ -3,25 +3,25 @@ Tieba Service Caller
 
 #### Introduction
 
-* Call Tieba service on selected text on web page by context menu
+1. Call Tieba service on selected text on web page by context menu
 
-* Utility functions like jump to Tieba, timestamp conversion and ip conversion
+2. Utility functions like jump to Tieba, timestamp conversion and ip conversion
 
-* Service and Hostname are configurable
+3. Domain Name, Service and Hostname are configurable
 
 #### Installation
 
-* Download CRX pack
+1. Download .crx pack
 
-* Wrench menu -> Tool -> Extension
+2. Wrench Menu > Tool > Extension
 
-* Drag CRX file into the panel
+3. Drag .crx file into the panel
 
 #### Future Plan
 
-* Draggable configuration page
+Draggable configuration page
 
 #### Copyright
 
-* This program is distributed under GNU General Public License v2.
+This program is distributed under GNU General Public License v2.
 
