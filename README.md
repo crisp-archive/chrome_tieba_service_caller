@@ -11,11 +11,11 @@ Tieba Service Caller
 
 #### Installation
 
-1. Download .crx pack
+For Chrome's new policy on extensions, users can only install extension from Chrome Web Store.
 
-2. Wrench Menu > Tool > Extension
+You may use developer mode to load the code locally.
 
-3. Drag .crx file into the panel
+And we plan to publish this on Chrome Web Store in the future.
 
 #### Future Plan
 
